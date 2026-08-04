@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "datahub-postgres-loader"
+version = "1.0.0"
+description = "Interactive DataHub dataset discovery and PostgreSQL loader"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "DataHub PostgreSQL Loader contributors" }]
+dependencies = ["psycopg[binary]>=3.2,<4"]
+
+[project.scripts]
+datahub-pg-load = "datahub_pg_loader.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/datahub_pg_loader"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
