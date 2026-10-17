@@ -1,4 +1,6 @@
-# DataHub PostgreSQL Loader
+# Ingestara
+
+Python package `datahub-postgres-loader`, CLI `datahub-pg-load`.
 
 An interactive Python package that discovers public DataHub datasets, reports their availability and complexity, measures current download speed, estimates transfer time, checks local PostgreSQL, asks for one explicit approval, and atomically loads the selected records as queryable `JSONB`.
 
